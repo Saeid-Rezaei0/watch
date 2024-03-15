@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحه محصول</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js" integrity="sha512-n4OA4qDY8nQyXLiBYFL2bmq6PfPIVn0FU8QjT+Mj7k0xAdkt9tAyu2qtBcGuSbJ76g3e/6KuqBiMl2Trg5NxFw==" crossorigin=""></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.rtl.min.css"
+    integrity="sha384-beJoAY4VI2Q+5IPXjI207/ntOuaz06QYCdpWfWRv4lSFDyUSqsM0W+wiAMr2I185" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <!-- شیییییییییییییییییییییییییییییییییی -->
+      <!-- Bootstrap CSS -->
+      
+
+      <!-- Font Awesome CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+      <!-- Custom CSS -->
+      <link rel="stylesheet" href="css/main.css">
+    <!-- شیییییییییییییییییییییییییییییییییی  -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color-scheme: dark;
+        }
+        body{
+            color: #fff;
+        }
+
+        .darckactive >  * {
+            color: #000 !important;
+            background-color: #FFF !important;
+         
+        }
+
+        .darckactive .navbar {
+            /* background-color: rgb(139, 136, 136) !important; */
+            background-color: #9b8c8c!important;
+         
+        }
+    </style>
+</head>
+<div class="overley ">
+</div>
+<div class="container_formm " id="loginnnform" >
+  <div class="screen">
+      <div class="screen__content">
+          <form class="login">
+              <div class="login__field">
+                  <i class="login__icon fas fa-user"></i>
+                  <input type="text" class="login__input" placeholder="نام کاربری / ایمل">
+              </div>
+              <div class="login__field">
+                  <i class="login__icon fas fa-lock"></i>
+                  <input type="password" class="login__input" placeholder="رمز عبور">
+              </div>
+              <div class="login__field">
+                <i class="login__icon fas fa-phone"></i>
+                <input type="number" class="login__input" placeholder="شماره همراه">
+            </div>
+              <button class="button login__submit">
+                  <span class="button__text">ثبت نام </span>
+                  <i class="button__icon fas fa-chevron-right"></i>
+              </button>				
+          </form>
+          <!-- <div class="social-login">
+             
+              <div class="social-icons">
+                  <a href="#" class="social-login__icon fab fa-instagram"></a>
+                  <a href="#" class="social-login__icon fab fa-facebook"></a>
+                  <a href="#" class="social-login__icon fab fa-twitter"></a>
+              </div>
+          </div> -->
+      </div>
+      <div class="screen__background">
+          <span class="screen__background__shape screen__background__shape4"></span>
+          <span class="screen__background__shape screen__background__shape3"></span>		
+          <span class="screen__background__shape screen__background__shape2"></span>
+          <span class="screen__background__shape screen__background__shape1"></span>
+      </div>		
+  </div>
+</div>
+<div class="lds-roller loderr " id="loder">
+    <!-- <h2 style="direction: rtl ; position: relative; top: 3%; right: -32%; color: black;"> در حال انتقال به سایت پذیرنده هستید...</h2> -->
+    <!-- <div></div> -->
+    <div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+<body>
+
+    <nav class="navbar nav-color text-white navbar-expand-lg px-3 " id="navBar" style="background-color: lightslategray; width: 100% !important; margin: auto !important; position: fixed; z-index: 1000 !important;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNav">
+            <span class="navbar-icon">
+                <i class="fas fa-bars"></i>
+            </span>
+        </button>
+    
+        <a href="#" class="navbar-brand">
+            <img src="img/icon_watch.png" width="45" alt="Logo">
+        </a>
+    
+        <div style="display: flex;">
+            <a href="password.html" class="text-white"> داشبورد مدیریت </a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item active text-info darkmode" style="margin-top: 0.6rem; color: #FFF !important;">
+                    <button class="fa-solid fa-moon" onclick="toggleDarkMode()" style="padding: 3px;"></button>
+                    <button class="fa-solid fa-sun" onclick="toggleDarkMode()" style="padding: 3px;"></button>
+                </li>
+                <li class="nav-item active text-info">
+                    <a href="http://127.0.0.1:5501/index2.html" style="transition: 1s;" class="nav-link text-white"><i
+                            class="fas fa-home"></i> خانه</a>
+                </li>
+                <li class="nav-item" id="submenuco">
+                    <a href="#prodact" class="nav-link text-white">
+                        <i class="fas fa-cube"></i> محصولات
+                    </a>
+                </li>
+                <li class="nav-item" id="loginsite">
+                  <a href="#" class="nav-link text-white">
+                    <i class="fas fa-building"></i> ثبت نام
+                  </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#moshtari" class="nav-link text-white">
+                        <i class="fas fa-comments"></i> بازخورد
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#tamas" class="nav-link text-white">
+                        <i class="fas fa-shopping-cart"></i> سفارش محصول
+                    </a>
+                </li>
+            </ul>
+    
+            <!-- Socials -->
+            <div class="nav-icons d-none d-lg-block">
+                <a href="#" class="nav-icon text-white">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://www.instagram.com/saeid_89999" class="nav-icon text-warning">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="nav-icon text-white">
+                    <i class="fab fa-telegram"></i>
+                </a>
+            </div>
+            <!-- End Socials -->
+        </div>
+       
+    </nav>
+    
+    
+
+<br>
+<br>
+    <div class="  d-flex align-items-center justify-content-center" style="padding-bottom: 5rem;">
+        <div class="row mt-5">
+            <!-- Left Section (Images) -->
+            <div class="col-lg-6 col-md-6 col-sm-12" style="border-radius: 0.5rem;">
+                <div class="d-flex m-3  ml-3" style="padding-left: 15rem;">
+                    <div class="img-product1 mb-2">
+                        <img src="img/watch/rolex-famous-brand-department-store-taipei_662214-259663.jpg"
+                            class="img-fluid shadow  mr-6  imgproducterrrr imgproducterrrr3" style="width: 70px; margin-right: 0.5rem; cursor: pointer; " alt="">
+                    </div>
+                    <div class="img-product1 mb-2">
+                        <img src="img/watch/gold-silver-watch-with-word-time-face_662214-95392.jpg"
+                            class="img-fluid shadow  mr-6 imgproducterrrr imgproducterrrr2" style="width: 70px; margin-left: 2rem cursor pointer;" alt="">
+                    </div>
+                    <div class="img-product1 mb-2">
+                        <img src="img/watch/realistic-clock-watch-chronograph-black-steel-gold-number-luxury-white-background-design-men-white-illustration_33869-1914.jpg"
+                            class="img-fluid shadow mr-6   imgproducterrrr imgproducterrrr1" style="width: 70px; margin: 0 2rem; cursor: pointer; " alt="">
+                    </div>
+                    <div class="img-product1 mb-2">
+                      <img src="img/watch/realistic-clock-watch-chronograph-black-steel-gold-number-luxury-white-background-design-men-white-illustration_33869-1914.jpg"
+                          class="img-fluid shadow  mr-6  imgproducterrrr imgproducterrrr4" style="width: 70px; cursor: pointer; " alt="">
+                  </div>
+                </div>
+                <img src="img/men-s-wrist-watch-black-tie-hot-cup-coffee-smartphone-wooden-table-black-envelope-with-place-text_251072-98.jpg"
+                    class=" w-100 img-main mt-lg-0 mt-4 pl-sm-5 mr-6  " alt="" style="border-radius: 0.8rem; margin-right: 2rem;cursor: pointer;   ">
+            </div>
+
+            <!-- Right Section (Product Info) -->
+            <div class="container col-lg-6 col-md-6 col-sm-12 datiass mb-5 pe-5 d-flex flex-column align-content-center" style="padding-top: 5rem; ">
+                <div class="container mt-4 pr-sm-5" >
+                    <span class="d-block text-right">مدل محصول</span>
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h3 class="titelmodel">clasiclng Lorem,</h3>
+                        <h3>نام برند</h3>
+                    </div>
+                    <div class="d-flex">
+                        <span style="font-size: 12px; padding-right: 15px; margin-top: 0.2rem;">Lorem, ipsum dolor.</span>
+                        <span class="ml-3" style="margin-left: -15px;">
+                            <i class="fa-solid fa-star" style="color: orange"></i>
+                            <i class="fa-solid fa-star" style="color: orange"></i>
+                            <i class="fa-solid fa-star" style="color: orange"></i>
+                            <i class="fa-solid fa-star" style="color: orange"></i>
+                            <i class="fa-solid fa-star" style="color: orange"></i>
+                        </span>
+                        <span style="font-size:  12px; padding-left: 17px; margin-top: 0.2rem;">4.9 Resivers lorem</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <a href="login.html">
+                            <button class="btn btn-primary">
+                                <i class="fa-solid fa-cart-arrow-down mr-2"></i>افزودن به سبد
+                            </button>
+                        </a>
+                        <span class="price">2,536$</span>
+                    </div>
+                </div>
+
+                <!-- Additional Sections -->
+                <div class="d-flex justify-content-around mt-5">
+                    <!-- First Section -->
+                    <div class="text-right">
+                        <div class="d-flex align-items-center mb-1">
+                            <i class="fa-solid fa-clock mr-2"></i>
+                            <div>ساعت‌های هنجارشکن عجیب</div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="fa-solid fa-calendar mr-2"></i>
+                            <div>ساعت‌های هنجارشک عجیب</div>
+                        </div>
+                    </div>
+
+                    <!-- Second Section -->
+                    <div class="text-right">
+                        <div class="d-flex align-items-center mb-1">
+                            <i class="fa-solid fa-star mr-2"></i>
+                            <div>اولین ها در دنیای ندارید</div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="fa-solid fa-heart mr-2"></i>
+                            <div>بررسی پرفروش ترین ساعت !</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="contact 5" id="contact">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 mx-auto">
+    
+              <section class="contact-page-section"
+                style="padding-top: 0.5REM !important; padding-bottom: 0.5REM !important;">
+                <div class="container text-right">
+                  <div class="sec-title" style="color: white !important;">
+                    <div class="title" style="font-size: 22PX !important;">تماس با ما</div>
+                    <h2 style="color: white !important;">با ما در تماس باشید</h2>
+                  </div>
+                  <div class="inner-container">
+                    <div class="row clearfix">
+                      <!--Form Column-->
+                      <div class="form-column col-md-8 col-sm-12 col-xs-12" style="background-color: transparent !important;"
+                      >
+                        <div class="inner-column" style="background: #06142e !important;">
+                          <!--Contact Form-->
+                          <div class="contact-form">
+                            <form method="post" action="sendemail.php" id="contact-form">
+                              <div class="row clearfix">
+                                <div class="form-group col-md-6 col-sm-6 co-xs-12">
+                                  <input type="text" name="name" value="" placeholder="نام" required>
+                                </div>
+                                <div class="form-group col-md-6 col-sm-6 co-xs-12">
+                                  <input type="email" name="email" value="" placeholder="ایمیل" required>
+                                </div>
+                                <div class="form-group col-md-6 col-sm-6 co-xs-12">
+                                  <input type="text" name="subject" value="" placeholder="موضوع" required>
+                                </div>
+                                <div class="form-group col-md-6 col-sm-6 co-xs-12">
+                                  <input type="text" name="phone" value="" placeholder="تلفن" required>
+                                </div>
+                                <div class="form-group col-md-12 col-sm-12 co-xs-12">
+                                  <textarea name="message" placeholder="پیام"
+                                    style="background-color: rgb(224, 205, 205) !important;"></textarea>
+                                </div>
+                                <div class="form-group col-md-12 col-sm-12 co-xs-12">
+                                  <button type="submit" class="theme-btn btn-style-one"
+                                    style="border-radius: 0.5rem;">ارسال</button>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                          <!--End Contact Form-->
+                        </div>
+                      </div>
+    
+                      <!--Info Column-->
+                      <div class="info-column col-md-4 col-sm-12 col-xs-12" style="background-color: #06142e !important;">
+                        <div class="inner-column">
+                          <h2>اطلاعات تماس</h2>
+                          <ul class="list-info">
+                            <li>ادرس تهران خیابان مطهری نبش خیابان فدک1
+                              <i class="fas fa-globe"></i>
+                            </li>
+                            <li>example@test<i class="far fa-envelope"></i></li>
+                            <li>
+                              </i> 09167047790 <i class="fas fa-phone"></i><br> 09388449181
+                              <i class="fas fa-phone"></i>
+    
+                            </li>
+                          </ul>
+                          <ul class="social-icon-four">
+                            <li class="follow">مارا دنبال کنید</li>
+    
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fab fa-telegram"></i></a></li>
+                            <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+    
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              </div>
+              </div>
+              <div id="map" style="height:  325px; width: 97%; margin-left: 1.5rem !important; margin: auto; padding: 0 20px;"></div>
+      </section>
+    <footer>
+        <footer class="footer-section mt-4 ">
+          <div class="container">
+            <div class="footer-cta pt-5 pb-5">
+              <div class="row">
+                <div class="col-xl-4 col-md-4 mb-30">
+                  <div class="single-cta">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="cta-text">
+                      <h4>ما را پیدا کنید</h4>
+                      <span>خیابان 1010، جنوب غربی 54321، چندیگره</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                  <div class="single-cta">
+                    <i class="fas fa-phone"></i>
+                    <div class="cta-text">
+                      <h4>تماس با ما</h4>
+                      <span>9876543210 0</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                  <div class="single-cta">
+                    <i class="far fa-envelope-open"></i>
+                    <div class="cta-text">
+                      <h4>ایمیل بزنید</h4>
+                      <span>mail@info.com</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="footer-content pt-5 pb-5">
+              <div class="row">
+                <div class="col-xl-4 col-lg-4 mb-50">
+                  <div class="footer-widget">
+                    <div class="footer-logo">
+                      <a href="index.html"><img src="https://i.ibb.co/QDy827D/ak-logo.png" class="img-fluid" alt="لوگو"></a>
+                    </div>
+                    <div class="footer-text">
+                      <p>لورم ایپسوم دلور سیت آمت، کنسکتتور آدیپیسایش ایلیت، سد دو eiusmod tempor incididuntut کنسکتتور
+                        آدیپیسایش
+                        ایلیت،لورم ایپسوم دلور سیت آمت.</p>
+                    </div>
+                    <div class="footer-social-icon" style="font-size: 55px;">
+                      <span>ما را دنبال کنید</span>
+                      <a href="#"><i class="fab fa-instagram instagram-bg" style="font-size: 2rem;"></i></a>
+                      <a href="#"><i class="fab fa-telegram-plane telegram-bg" style="font-size: 2rem;"></i></a>
+                      <a href="#"><i class="fab fa-whatsapp whatsapp-bg" style="font-size: 2rem;"></i></a>
+                      <!-- دیگر ایکن‌ها مانند ایکن واتساپ، تلگرام و ... -->
+                    </div>
+    
+                  </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                  <div class="footer-widget">
+                    <div class="footer-widget-heading">
+                      <h3>محصولات</h3>
+                    </div>
+                    <ul>
+                      <li><a href="#">ساعت‌های مردانه</a></li>
+                      <li><a href="#">ساعت‌های زنانه</a></li>
+                      <li><a href="#">ساعت‌های بچگانه</a></li>
+                      <li><a href="#">ساعت‌های لوکس</a></li>
+                      <li><a href="#">ساعت‌های ورزشی</a></li>
+                      <li><a href="#">ساعت‌های هوشمند</a></li>
+                      <li><a href="#">تخفیفات و پیشنهادات</a></li>
+                      <li><a href="#">تعمیر و خدمات پس از فروش</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                  <div class="footer-widget">
+                    <div class="footer-widget-heading">
+                      <h3>اشتراک</h3>
+                    </div>
+                    <div class="footer-text mb-25">
+                      <p>از اشتراک خبرنامه‌مان به‌منظور دریافت آخرین اخبار و تخفیفات استفاده کنید، لطفاً آدرس ایمیل خود را
+                        وارد کنید.</p>
+                    </div>
+                    <div class="subscribe-form">
+                      <form action="#">
+                        <input type="text" placeholder="آدرس ایمیل">
+                        <button><i class="fab fa-telegram-plane"></i></button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+    
+              </div>
+            </div>
+          </div>
+          <div class="copyright-area">
+            <div class="container">
+              <div class="row">
+                <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                  <div class="copyright-text">
+                    <p>حق کپی‌رایت &copy; 2023، همه حقوق محفوظ است <a href="https://codepen.io/anupkumar92/">سعید رضایی</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                  <div class="footer-menu">
+                    <ul>
+                      <li><a href="#">صفحه اصلی</a></li>
+                      <li><a href="#">شرایط و قوانین</a></li>
+                      <li><a href="#">حریم خصوصی</a></li>
+                      <li><a href="#">سیاست‌ها</a></li>
+                      <li><a href="#">مدل‌های ساعت</a></li>
+                    </ul>
+    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+    
+      </footer>
+</body>
+<script>
+let navbartoggler = document.querySelector('.navbar-toggler');
+let navbarcollapse = document.querySelector('.navbar-collapse');
+document.addEventListener('DOMContentLoaded', function () {
+    let imgsubs = document.querySelectorAll('.imgproducterrrr');
+    let mainimg = document.querySelector('.img-main')
+    // آی دی تصویر اصلی شما
+
+    imgsubs.forEach((item) => {
+        item.addEventListener('click', () => {
+            let imgSrc = item.getAttribute('src');
+            mainimg.setAttribute('src', imgSrc);
+        
+         
+        });
+    });
+});
+
+
+navbartoggler.addEventListener('click', () => {
+    if (navbarcollapse.style.display === 'none' || navbarcollapse.style.display === '') {
+        navbarcollapse.style.display = 'block';
+    } else {
+        navbarcollapse.style.display = 'none';
+    }
+});
+
+    let loader = document.querySelector('.lds-roller');
+loader.style.zIndex = 100000000;
+
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        loader.classList.add('hiddernn');
+        loader.style.zIndex = 0;
+
+        // اگر کلاس darckactive وجود نداشته باشد، رنگ پس زمینه لودر را به سیاه تنظیم کنید
+        if (document.body.classList.contains('darckactive')) {
+            loader.style.backgroundColor = '#000';
+        }
+
+        document.body.style.overflow = 'visible';
+    }, 1000);
+});
+
+const overley = document.querySelector('.overley')
+let login = document.getElementById('loginsite')
+let logginform = document.getElementById('loginnnform')
+overley.addEventListener('click', ()=> {
+  overley.classList.remove('activeov')
+  logginform.classList.remove('active')
+})
+
+
+login.addEventListener('click', ()=> {
+  overley.classList.add('activeov')
+  logginform.classList.add('active')
+})
+
+    let price = document.querySelector('.price')
+    let mainimg = document.querySelector('.img-main')
+    let model = document.querySelector('.titelmodel')
+    let imgproducterrrr1 = document.querySelector('.imgproducterrrr1')
+    let imgproducterrrr2 = document.querySelector('.imgproducterrrr2')
+    let imgproducterrrr3 = document.querySelector('.imgproducterrrr3')
+    let imgproducterrrr4 = document.querySelector('.imgproducterrrr4')
+    let productsArray = [
+        { id: 6, title: 'کاسیلو(casilo)', price: '4800,000', img: 'img/watch/concept-design-hand-watch_985323-11581.jpg',  img: 'img/watch/concept-design-hand-watch_985323-11581.jpg', img2 : 'img/watch/Screenshot 2024-01-27 133536.png', img3: 'img/watch/concept-design-hand-watch_985323-11581.jpg', img4: 'img/watch/Screenshot 2024-01-27 133912.png' },
+        { id: 4, title: 'اسپرت(sport)', price: '1800,000', img: 'img/watch/rolex-watch-with-brand-name-brand-it_905510-6718.jpg',  img: 'img/watch/rolex-watch-with-brand-name-brand-it_905510-6718.jpg', img2: 'img/watch/Screenshot 2024-01-27 134313.png', img3: 'img/watch/Screenshot 2024-01-27 134400.png', img4: 'img/watch/rolex-watch-with-brand-name-brand-it_905510-6718.jpg'  },
+        { id: 5, title: '(rolex)رولیکس', price: ' 3200,000', img: 'img/watch/rolex-famous-brand-department-store-taipei_662214-259663.jpg' , img: 'img/watch/rolex-famous-brand-department-store-taipei_662214-259663.jpg', img2: 'img/watch/Screenshot 2024-01-27 134036.png', img3: 'img/watch/Screenshot 2024-01-27 134119.png', img4: 'img/watch/rolex-famous-brand-department-store-taipei_662214-259663.jpg' },
+        { id: 9, title: 'اسپرت(sport)', price: '1800,000', img: 'img/watch/rolex-watch-with-brand-name-brand-it_905510-6718.jpg', img2: 'img/watch/Screenshot 2024-01-27 134313.png', img3: 'img/watch/Screenshot 2024-01-27 134400.png', img4: 'img/watch/rolex-watch-with-brand-name-brand-it_905510-6718.jpg' },
+        { id: 8, title: '(rolex)رولیکس', price: ' 3200,000', img: 'img/watch/rolex-famous-brand-department-store-taipei_662214-259663.jpg', img2: 'img/watch/Screenshot 2024-01-27 134036.png', img3: 'img/watch/Screenshot 2024-01-27 134119.png', img4: 'img/watch/rolex-famous-brand-department-store-taipei_662214-259663.jpg' },
+        { id: 7, title: 'کاسیلو(casilo)', price: '4800,000', img: 'img/watch/concept-design-hand-watch_985323-11581.jpg', img2 : 'img/watch/Screenshot 2024-01-27 133536.png', img3: 'img/watch/concept-design-hand-watch_985323-11581.jpg', img4: 'img/watch/Screenshot 2024-01-27 133912.png' },
+        { id: 1, title: 'چوپارد (ch)', price: '1800,000', img: 'img/men-s-wrist-watch-black-tie-hot-cup-coffee-smartphone-wooden-table-black-envelope-with-place-text_251072-98.jpg' , img4: 'img/men-s-wrist-watch-black-tie-hot-cup-coffee-smartphone-wooden-table-black-envelope-with-place-text_251072-98.jpg', img3: 'img/watch/Screenshot 2024-01-27 132529.png', img2: 'img/watch/Screenshot 2024-01-27 132619.png', img1: 'img/watch/Screenshot 2024-01-27 132708.png', },
+        { id: 2, title: 'هبلو (Hublot)', price: '2100,000', img: 'img/black-luxury-watch-black-coals-background_158023-2040.jpg', img3: 'img/black-luxury-watch-black-coals-background_158023-2040.jpg', img2: 'img/watch/Screenshot 2024-01-27 133040.png', img1: 'img/watch/Screenshot 2024-01-27 132854.png', img1: 'img/watch/Screenshot 2024-01-27 133316.png'  },
+        { id: 3, title: 'کارتیه (Cartier)', price: '4500,000', img4: 'img/watch/gold-silver-watch-with-word-time-face_662214-95392.jpg', img3: 'img/watch/Screenshot 2024-01-27 131732.png', img2: 'img/watch/Screenshot 2024-01-27 131557.png', img1: 'img/watch/Screenshot 2024-01-27 130652.png', img: 'img/watch/gold-silver-watch-with-word-time-face_662214-95392.jpg' },
+    ]
+    
+let locationParams = new URLSearchParams(location.search)
+let mainProductID = locationParams.get('id')
+
+let mainProductObject = productsArray.find(function (product) {
+    return product.id === Number(mainProductID)
+})
+
+if (mainProductObject) {
+    model.innerHTML = mainProductObject.title
+    price.innerHTML = mainProductObject.price + " " +`<i class="fa-solid fa-money-bill-1-wave"></i>`
+    mainimg.setAttribute('src', mainProductObject.img)
+    imgproducterrrr1.setAttribute('src', mainProductObject.img1)
+    imgproducterrrr2.setAttribute('src', mainProductObject.img2)
+    imgproducterrrr3.setAttribute('src', mainProductObject.img3)
+    imgproducterrrr4.setAttribute('src', mainProductObject.img4)
+}
+function toggleDarkMode(mode) {
+        const body = document.body;
+        body.classList.toggle('darckactive');
+
+        // ذخیره وضعیت دارک مد در Local Storage
+        const isDarkMode = body.classList.contains('darckactive');
+        localStorage.setItem('darkMode', isDarkMode);
+
+        // نمایش مناسب ایکون‌ها بر اساس وضعیت دارک مد
+        const moonIcon = document.querySelector('.fa-moon');
+        const sunIcon = document.querySelector('.fa-sun');
+        
+        if (isDarkMode) {
+            moonIcon.style.display = 'none';
+            sunIcon.style.display = 'inline-block';
+        } else {
+            moonIcon.style.display = 'inline-block';
+            sunIcon.style.display = 'none';
+        }
+    }
+
+    // اعمال وضعیت اولیه از Local Storage
+    const initialDarkMode = localStorage.getItem('darkMode') === 'true';
+    if (initialDarkMode) {
+        toggleDarkMode('darkMode');
+    }
+
+
+// بررسی وضعیت دارک مد در Local Storage و اعمال آن به صفحه
+function applyDarkModeFromLocalStorage() {
+    const isDarkMode = localStorage.getItem('darkMode') === 'true';
+    const body = document.body;
+
+    if (isDarkMode) {
+        body.classList.add('darckactive');
+    } else {
+        body.classList.remove('darckactive');
+    }
+}
+
+// اجرای تابع applyDarkModeFromLocalStorage برای اعمال وضعیت اولیه
+applyDarkModeFromLocalStorage();
+
+</script>
+<script>
+    var map = L.map('map').setView([35.6895, 51.3890], 12); // Coordinates for Tehran
+  
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    }).addTo(map);
+  
+    // Marker for Tehran
+    var tehranMarker = L.marker([35.6895, 51.3890]).addTo(map);
+    tehranMarker.bindPopup("<b> جهت سفارش مکان خود را انتخاب کنید </b>").openPopup();
+  
+    // Marker for Pars, Tehran
+    // var parsMarker = L.marker([35.7366, 51.3486]).addTo(map);
+    // parsMarker.bindPopup("<b>منطقه پارس تهران</b>").openPopup();
+  </script>
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+   <script src="js/bootstrap.bundle.min.js"></script>
+   <!-- ============================================================================== -->
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+
+   </html>

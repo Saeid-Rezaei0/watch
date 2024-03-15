@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="css/main.css">
+  <!-- ... -->
+  <!-- Bootstrap CSS  -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="postlogin/style.css">
+  <!-- Slick CSS -->
+  <link rel="stylesheet" href="./slider/css/slick.css" />
+  <link rel="stylesheet" href="./slider/css/slick-theme.css" />
+  <link rel="stylesheet" href="css/slick.css">
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="slider/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="slider/css/owl.theme.default.min.css">
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-...your-sha512-hash-here..." crossorigin="anonymous" />
+  <!-- Animate CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- Custom Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazir:wght@300;400;600&display=swap" />
+  <link rel="stylesheet" href="path/to/your/font-awesome/css/all.min.css">
+  <!-- Main CSS  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontsource-vazir@latest/css/all.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" integrity="sha512-iT5SUXcFoXgGghviP7BdNBfGy63N7/BDy3U3dW+Cjj5l8TO9hbyP/DtkOBtuGoq6JnEppLXBjJ70sWmZuUOJvOQ==" crossorigin=""/>
+  <!-- Leaflet JavaScript -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js" integrity="sha512-n4OA4qDY8nQyXLiBYFL2bmq6PfPIVn0FU8QjT+Mj7k0xAdkt9tAyu2qtBcGuSbJ76g3e/6KuqBiMl2Trg5NxFw==" crossorigin=""></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.rtl.min.css"
+integrity="sha384-beJoAY4VI2Q+5IPXjI207/ntOuaz06QYCdpWfWRv4lSFDyUSqsM0W+wiAMr2I185" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/icon_watch.png">
+  <!-- font awesome -->
+  <title>زمانگرد</title>
+</head>
+
+<body>
+
+  <div class="overley ">
+  </div>
+  <div class="container_formm " id="loginnnform" >
+    <div class="screen">
+        <div class="screen__content">
+            <form class="login">
+                <div class="login__field">
+                    <i class="login__icon fas fa-user"></i>
+                    <input type="text" class="login__input" placeholder="نام کاربری / ایمل">
+                </div>
+                <div class="login__field">
+                    <i class="login__icon fas fa-lock"></i>
+                    <input type="password" class="login__input" placeholder="رمز عبور">
+                </div>
+                <div class="login__field">
+                  <i class="login__icon fas fa-phone"></i>
+                  <input type="number" class="login__input" placeholder="شماره همراه">
+              </div>
+                <button class="button login__submit">
+                    <span class="button__text">ثبت نام </span>
+                    <i class="button__icon fas fa-chevron-right"></i>
+                </button>				
+            </form>
+            <!-- <div class="social-login">
+               
+                <div class="social-icons">
+                    <a href="#" class="social-login__icon fab fa-instagram"></a>
+                    <a href="#" class="social-login__icon fab fa-facebook"></a>
+                    <a href="#" class="social-login__icon fab fa-twitter"></a>
+                </div>
+            </div> -->
+        </div>
+        <div class="screen__background">
+            <span class="screen__background__shape screen__background__shape4"></span>
+            <span class="screen__background__shape screen__background__shape3"></span>		
+            <span class="screen__background__shape screen__background__shape2"></span>
+            <span class="screen__background__shape screen__background__shape1"></span>
+        </div>		
+    </div>
+</div>
+  <link rel="stylesheet" href="path/to/your/font-awesome/css/all.min.css">
+  <div class="lds-roller loderr" id="loder">
+    <!-- <h2 style="direction: rtl ; position: relative; top: 3%; right: -32%; color: black;"> در حال انتقال به سایت پذیرنده هستید...</h2> -->
+    <!-- <div></div> -->
+    <div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+ 
+  <!--  برای بخش پیشرفت اسکرول//-->
+  <div id="scrol"></div>
+
+  <!-- برای بخش منو سایت//-->
+
+
+
+  <nav class="navbar nav-color text-white navbar-expand-lg px-3 " id="navBar" style="background-color: transparent !important; width: 80% !important; margin: auto !important; position: absolute; z-index: 1000 
+  !important; right: 10% !important;">
+    <a href="#" class="navbar-brand">
+      <img src="img/icon_watch.png" width="45" alt="Logo">
+    </a>
+   <div style="display: flex;">
+    <a href="password.html" class="text-white"> داشبورد مدیریت </a>
+   </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNav">
+      <span class="navbar-icon">
+        <i class="fas fa-bars"></i>
+      </span>
+    </button>
+    <div class="collapse navbar-collapse" id="myNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item active text-info">
+          <a href="#" style="transition: 1s;" class="nav-link text-white"><i class="fas fa-home"></i> خانه</a>
+        </li>
+        <li class="nav-item" id="submenuco">
+          <a href="#prodact" class="nav-link text-white">
+            <i class="fas fa-cube"></i> محصولات
+          </a>
+        </li>
+        
+        <li class="nav-item" id="loginsite">
+          <a href="#" class="nav-link text-white">
+            <i class="fas fa-building"></i> ثبت نام
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#moshtari" class="nav-link text-white">
+            <i class="fas fa-comments"></i> بازخورد
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#tamas" class="nav-link text-white">
+            <i class="fas fa-shopping-cart"></i> سفارش محصول
+          </a>
+        </li>
+
+      </ul>
+
+      <!-- Socials -->
+      <div class="nav-icons d-none d-lg-block">
+        <a href="#" class="nav-icon text-white">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://www.instagram.com/saeid_89999" class="nav-icon text-warning">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="nav-icon text-white">
+          <i class="fab fa-telegram"></i>
+        </a>
+      </div>
+      <!-- End Socials -->
+    </div>
+  </nav>
+
+  <div class="sub-container">
+    <div class="submenuhov">
+      <div class="item-hover"></div>
+      <div style="display: flex !important; direction: rtl; justify-content: space-between; overflow: hidden;">
+        <ul style="display: flex; align-items:  center; flex-direction: column; padding: 1rem 0.5rem;"
+          class="containersubmenu">
+          <h4 style="margin-left: 20px;">همه ساعت ها</h4>
+          <ul>
+            <li><a href="#" class="submenu-link">
+                ساعت مردانه تخفیف دار<i class="fa-solid fa-left-long" style="margin-top: 1rem; padding: 0.2rem;"></i>
+              </a></li>
+            <li><a href="#" class="submenu-link">ساعت زنانه تخفیف دار
+              </a></li>
+          </ul>
+        </ul>
+        <ul style="display: flex; align-items:  center; flex-direction: column; padding: 1rem 0.5rem;"
+          class="containersubmenu">
+          <h5 style="margin-left: 20px;">ساعت مچی زنانه</h5>
+          <ul>
+            <li><a href="#" class="submenu-link" title="زنانه مجلسی">کلاسیک زنانه</a></li>
+            <li><a href="#" class="submenu-link">بند فلزی زنانه</a></li>
+            <li><a href="#" class="submenu-link">ساعت مردانه تخفیف دار</a></li>
+            <li><a href="#" class="submenu-link">ساعت زنانه تخفیف دار</a></li>
+            <li><a href="#" class="submenu-link">اسکلتون یا قلب باز زنانه</a></li>
+
+          </ul>
+        </ul>
+        <ul style="display: flex; align-items:  center; flex-direction: column; padding: 1rem 0.5rem;"
+          class="containersubmenu">
+          <h5 style="margin-left: 20px;">ساعت مچی مردانه</h5>
+          <ul class="containersubmenu">
+            <li><a href="#" class="submenu-link">اتوماتیک مردانه</a></li>
+            <li><a href="#" class="submenu-link">کلاسیک مردانه</a></li>
+            <li><a href="#" class="submenu-link">بند فلزی مردانه</a></li>
+            <li><a href="#" class="submenu-link">ساعت بند چرمی مردانه</a></li>
+            <li><a href="#" class="submenu-link">اسکلتون یا قلب باز مردانه</a></li>
+          </ul>
+        </ul>
+        <img src="img/watch/hhhhhhhh4-707.jpg" style="width: 30%; height:20rem" alt="">
+      </div>
+    </div>
+
+  </div>
+  <div class="back-to-top active">
+    <i class="fa fa-angle-up"></i>
+</div>
+
+
+  <!-- Swiper -->
+  <div class="swiper_container" style="margin-top: -rem; width: 100% !important;">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide test__img">
+          <!-- <img src="img/watch/hed22-63.jpg" alt=""> -->
+
+        </div>
+        <div class="swiper-slide test__img2">
+          <img src="img/watch/3d-futuristic-neon-glow-podium-stage-product-placement_401134-3.jpg" alt="">
+        </div>
+
+        <div class="swiper-slide test__img3"></a>
+          <img src="img/watch/midnight-sale-badge-podium-product-display_401134-326.jpg" alt="">
+
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+      <div class="autoplay-progress">
+        <svg viewBox="0 0 48 48">
+          <circle cx="24" cy="24" r="20"></circle>
+        </svg>
+        <span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Swiper JS -->
+
+
+  <!-- skil -->
+  <section class="sticky py-5" style="direction: rtl !important;">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col d-flex flex-wrap  text-uppercase justify-content-center">
+          <h1 class="mx-1 font-weight-bold align-self-center  wow animate__backInLeft animate__animated">چرا ما</h1>
+          <h1 class="mx-1 section-title-special wow  animate__backInRight animate__animated">چرا زمانگرد؟</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6 col-lg-3 text-center my-3 wow animate__backInUp animate__animated">
+          <a href="#" class="skills-icon p-2 rounded-circle">
+            <i class="fas fa-award fa-fw"></i>
+          </a>
+          <h4 class="text-uppercase font-weight-bold my-3">
+            تمام برندها
+          </h4>
+          <div class="skills-underline"></div>
+          <p class="w-75 mx-auto text-muted">تضمین کیفیت، ارائه بهترین کیفیت محصولات و رضایت مشتریان ما از اهداف اصلی
+            ماست.</p>
+        </div>
+
+        <div class="col-sm-6 col-lg-3 text-center my-3 wow animate__backInUp animate__animated">
+          <a href="#" class="skills-icon p-2 rounded-circle">
+            <i class="fas fa-headset fa-fw"></i>
+          </a>
+          <h4 class="text-uppercase font-weight-bold my-3">
+            پشتیبانی رایگان
+          </h4>
+          <div class="skills-underline"></div>
+          <p class="w-75 mx-auto text-muted">پشتیبانی رایگان 24/7؛ همیشه در دسترس هستیم تا به سوالات شما پاسخ دهیم و کمک
+            کنیم.</p>
+        </div>
+
+        <div class="col-sm-6 col-lg-3 text-center my-3 wow animate__animated animate__backInDown">
+          <a href="#" class="skills-icon p-2 rounded-circle">
+            <i class="fas fa-layer-group fa-fw"></i>
+          </a>
+          <h4 class="text-uppercase font-weight-bold my-3">
+            تنوع برندها
+          </h4>
+          <div class="skills-underline"></div>
+          <p class="w-75 mx-auto text-muted">تنوع برندها و مدل‌ها، امکان انتخاب از بین گستره‌ای از محصولات با کیفیت را
+            برای شما فراهم می‌سازد.</p>
+        </div>
+
+        <div class="col-sm-6 col-lg-3 text-center my-3 wow animate__animated animate__backInDown">
+          <a href="#" class="skills-icon p-2 rounded-circle">
+            <i class="fas fa-coins fa-fw"></i>
+          </a>
+          <h4 class="text-uppercase font-weight-bold my-3">
+            بهینه‌ سازی هزینه
+          </h4>
+          <div class="skills-underline"></div>
+          <p class="w-75 mx-auto text-muted">با بهینه‌سازی هزینه‌ها و ارائه محصولات با قیمت رقابتی، بهترین ارزش را به
+            شما ارائه می‌دهیم.</p>
+        </div>
+      </div>
+
+
+    </div>
+    </div>
+  </section>
+  <!-- slider =============================================================================  -->
+
+
+  <div class="row mb-5 animate__tada wow animate__animated">
+    <div class="col d-flex flex-wrap text-uppercase justify-content-center">
+      <h1 class="font-weight-bold align-self-center mx-1">برند ها</h1>
+      <h1 class="section-title-special mx-1">پرفروش ترین</h1>
+    </div>
+  </div>
+  <div style="background-color: #FFF; padding: 1.5rem 1rem 0rem 1rem; margin-top: 0.7rem; overflow: hidden;">
+    <div class="newest-course-container col-12">
+        <a href="#curses"></a>
+    
+        <i class="fas fa-angle-left" id="prevslider" onclick="provsider()"></i>
+
+        <div class="newest-course">
+            <div class="feature-cours-container" style="direction: ltr;">
+                <div class="course-container">
+                 
+                    <div class="course   animate__animated ">
+                        <!-- thumnali-course-holder -->
+                    
+        <div class=" mx-auto my-3 animate__zoomIn animate__animated wow">
+          <div class="card car-card" id="prodact" >
+            <img src="img/watch/black-silver-watch-with-time-12-30_655090-84939.avif" class="img-fluid card-img-top"
+              alt="" style="background-color: cadetblue;">
+            <div class="card-body">
+              <div class="car-info d-flex justify-content-between">
+                <div class="card-text text-uppercase">
+                  <h6>مدل اومگا(omga)</h6>
+                  <h6 class="font-weight-bold">
+
+                    <span style="color: red;">موجود نیست</span>
+                  </h6>
+                
+                </div>
+                <!-- <h5 class="d-flex timercoustom ml-5 ">
+                </h5> -->
+                <!-- <span class="mt-5 "> off %</span> -->
+                <h5 class="car-value py-2 px-3 align-self-center">
+               <a href="">
+                <span class="car-price ">480,000  
+              
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                  fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16">
+                  <path
+                    d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l.5 2H5V5zM6 5v2h2V5zm3 0v2h2V5zm3 0v2h1.36l.5-2zm1.11 3H12v2h.61zM11 8H9v2h2zM8 8H6v2h2zM5 8H3.89l.5 2H5zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0" />
+                </svg></span>
+               </a>
+                </h5>
+              </div>
+            </div>
+            <div class="card-footer text-uppercase d-flex justify-content-between">
+              <p><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-water" viewBox="0 0 16 16">
+                    <path
+                      d="M.036 3.314a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0L.314 3.964a.5.5 0 0 1-.278-.65zm0 3a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0L.314 6.964a.5.5 0 0 1-.278-.65zm0 3a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0L.314 9.964a.5.5 0 0 1-.278-.65zm0 3a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.757-.703a.5.5 0 0 1-.278-.65z" />
+                  </svg></span>ضد آب</p>
+              <!-- آیکون دسته‌ها -->
+              <p><span><i class="fas fa-cogs"></i></span>اتوماتیک</p>
+              <!-- آیکون ساعت دوباره -->
+
+              <p><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-smartwatch" viewBox="0 0 16 16">
+                    <path d="M9 5a.5.5 0 0 0-1 0v3H6a.5.5 0 0 0 0 1h2.5a.5.5 0 0 0 .5-.5z" />
+                    <path
+                      d="M4 1.667v.383A2.5 2.5 0 0 0 2 4.5v7a2.5 2.5 0 0 0 2 2.45v.383C4 15.253 4.746 16 5.667 16h4.666c.92 0 1.667-.746 1.667-1.667v-.383a2.5 2.5 0 0 0 2-2.45V8h.5a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 0-.5-.5H14v-.5a2.5 2.5 0 0 0-2-2.45v-.383C12 .747 11.254 0 10.333 0H5.667C4.747 0 4 .746 4 1.667M4.5 3h7A1.5 1.5 0 0 1 13 4.5v7a1.5 1.5 0 0 1-1.5 1.5h-7A1.5 1.5 0 0 1 3 11.5v-7A1.5 1.5 0 0 1 4.5 3" />
+                  </svg></span>سبک و شیشه‌ای</p>
+            </div>
+          </div>
+        </div>
+        
+                    </div> 
+                    <div class="course   animate__animated ">
+                      <!-- thumnali-course-holder -->
+                  
+      <div class=" mx-auto my-3 animate__zoomIn animate__animated wow ">
+        <div class="card car-card" id="prodact">
+          <img src="img/watch/concept-design-hand-watch_985323-11581.jpg" class="img-fluid card-img-top"
+           alt="">
+          <div class="card-body">
+            <div class="car-info d-flex justify-content-between">
+              <div class="card-text text-uppercase">
+                <h6>مدل</h6>
+                <h6 class="font-weight-bold">المانی (german)</h6>
+              </div>
+              <!-- <h5 class="d-flex timercoustom ml-5 ">
+              </h5> -->
+              <!-- <span class="mt-5 "> off %</span> -->
+              <h5 class="car-value py-2 px-3 align-self-center">
+            <a href="product.html?id=6">
+              <span class="car-price ">2100,000 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16">
+                <path
+                  d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l.5 2H5V5zM6 5v2h2V5zm3 0v2h2V5zm3 0v2h1.36l.5-2zm1.11 3H12v2h.61zM11 8H9v2h2zM8 8H6v2h2zM5 8H3.89l.5 2H5zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0" />
+              </svg></span>
+            </a>
+              </h5>
+            </div>
+          </div>
+          <div class="card-footer text-uppercase d-flex justify-content-between">
+            <p><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-water" viewBox="0 0 16 16">
+                  <path
+                    d="M.036 3.314a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0L.314 3.964a.5.5 0 0 1-.278-.65zm0 3a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0L.314 6.964a.5.5 0 0 1-.278-.65zm0 3a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0L.314 9.964a.5.5 0 0 1-.278-.65zm0 3a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.757-.703a.5.5 0 0 1-.278-.65z" />
+                </svg></span>ضد آب</p>
+            <!-- آیکون دسته‌ها -->
+            <p><span><i class="fas fa-cogs"></i></span>اتوماتیک</p>
+            <!-- آیکون ساعت دوباره -->
+
+            <p><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-smartwatch" viewBox="0 0 16 16">
+                  <path d="M9 5a.5.5 0 0 0-1 0v3H6a.5.5 0 0 0 0 1h2.5a.5.5 0 0 0 .5-.5z" />
+                  <path
+                    d="M4 1.667v.383A2.5 2.5 0 0 0 2 4.5v7a2.5 2.5 0 0 0 2 2.45v.383C4 15.253 4.746 16 5.667 16h4.666c.92 0 1.667-.746 1.667-1.667v-.383a2.5 2.5 0 0 0 2-2.45V8h.5a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 0-.5-.5H14v-.5a2.5 2.5 0 0 0-2-2.45v-.383C12 .747 11.254 0 10.333 0H5.667C4.747 0 4 .746 4 1.667M4.5 3h7A1.5 1.5 0 0 1 13 4.5v7a1.5 1.5 0 0 1-1.5 1.5h-7A1.5 1.5 0 0 1 3 11.5v-7A1.5 1.5 0 0 1 4.5 3" />
+                </svg></span>سبک و شیشه‌ای</p>
+          </div>
+        </div>
+      </div>
+      
+                  </div>
+                  <div class="course   animate__animated ">
+                    <!-- thumnali-course-holder -->
+                
+    <div class=" mx-auto my-3 animate__zoomIn animate__animated wow ">
+      <div class="card car-card" id="prodact">
+        <img src="img/watch/rolex-famous-brand-department-store-taipei_662214-259663.jpg" class="img-fluid card-img-top"
+          alt="">
+        <div class="card-body">
+          <div class="car-info d-flex justify-content-between">
+            <div class="card-text text-uppercase">
+              <h6>مدل</h6>
+              <h6 class="font-weight-bold">کاسیلو (casilo)</h6>
+            </div>
+            <!-- <h5 class="d-flex timercoustom ml-5 ">
+            </h5> -->
+            <!-- <span class="mt-5 "> off %</span> -->
+            <h5 class="car-value py-2 px-3 align-self-center">
+       <a href="product.html?id=5">
+        <span class="car-price ">3600,000 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+          fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16">
+          <path
+            d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l.5 2H5V5zM6 5v2h2V5zm3 0v2h2V5zm3 0v2h1.36l.5-2zm1.11 3H12v2h.61zM11 8H9v2h2zM8 8H6v2h2zM5 8H3.89l.5 2H5zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0" />
+        </svg></span>
+       </a>
+            </h5>
+          </div>
+        </div>
+        <div class="card-footer text-uppercase d-flex justify-content-between">
+          <p><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-water" viewBox="0 0 16 16">
+                <path
+                  d="M.036 3.314a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0L.314 3.964a.5.5 0 0 1-.278-.65zm0 3a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0L.314 6.964a.5.5 0 0 1-.278-.65zm0 3a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0L.314 9.964a.5.5 0 0 1-.278-.65zm0 3a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.757-.703a.5.5 0 0 1-.278-.65z" />
+              </svg></span>ضد آب</p>
+          <!-- آیکون دسته‌ها -->
+          <p><span><i class="fas fa-cogs"></i></span>اتوماتیک</p>
+          <!-- آیکون ساعت دوباره -->
+
+          <p><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-smartwatch" viewBox="0 0 16 16">
+                <path d="M9 5a.5.5 0 0 0-1 0v3H6a.5.5 0 0 0 0 1h2.5a.5.5 0 0 0 .5-.5z" />
+                <path
+                  d="M4 1.667v.383A2.5 2.5 0 0 0 2 4.5v7a2.5 2.5 0 0 0 2 2.45v.383C4 15.253 4.746 16 5.667 16h4.666c.92 0 1.667-.746 1.667-1.667v-.383a2.5 2.5 0 0 0 2-2.45V8h.5a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 0-.5-.5H14v-.5a2.5 2.5 0 0 0-2-2.45v-.383C12 .747 11.254 0 10.333 0H5.667C4.747 0 4 .746 4 1.667M4.5 3h7A1.5 1.5 0 0 1 13 4.5v7a1.5 1.5 0 0 1-1.5 1.5h-7A1.5 1.5 0 0 1 3 11.5v-7A1.5 1.5 0 0 1 4.5 3" />
+              </svg></span>سبک و شیشه‌ای</p>
+        </div>
+      </div>
+    </div>
+    
+                </div>
+                <div class="course   animate__animated ">
+                  <!-- thumnali-course-holder -->
+              
+  <div class=" mx-auto my-3 animate__zoomIn animate__animated wow ">
+    <div class="card car-card" id="prodact">
+      <img src="img/watch/rolex-watch-with-brand-name-brand-it_905510-6718.jpg" class="img-fluid card-img-top"
+        alt="">
+      <div class="card-body">
+        <div class="car-info d-flex justify-content-between">
+          <div class="card-text text-uppercase">
+            <h6>مدل</h6>
+            <h6 class="font-weight-bold">اسپرت (sport)</h6>
+          </div>
+          <!-- <h5 class="d-flex timercoustom ml-5 ">
+          </h5> -->
+          <!-- <span class="mt-5 "> off %</span> -->
+          <h5 class="car-value py-2 px-3 align-self-center">
+            <a href="product.html?id=9">
+              <span class="car-price ">1800,000 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16">
+                <path
+                  d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l.5 2H5V5zM6 5v2h2V5zm3 0v2h2V5zm3 0v2h1.36l.5-2zm1.11 3H12v2h.61zM11 8H9v2h2zM8 8H6v2h2zM5 8H3.89l.5 2H5zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0" />
+              </svg></span>
+            </a>
+          </h5>
+        </div>
+      </div>
+      <div class="card-footer text-uppercase d-flex justify-content-between">
+        <p><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-water" viewBox="0 0 16 16">
+              <path
+                d="M.036 3.314a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0L.314 3.964a.5.5 0 0 1-.278-.65zm0 3a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0L.314 6.964a.5.5 0 0 1-.278-.65zm0 3a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0L.314 9.964a.5.5 0 0 1-.278-.65zm0 3a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.757-.703a.5.5 0 0 1-.278-.65z" />
+            </svg></span>ضد آب</p>
+        <!-- آیکون دسته‌ها -->
+        <p><span><i class="fas fa-cogs"></i></span>اتوماتیک</p>
+        <!-- آیکون ساعت دوباره -->
+
+        <p><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-smartwatch" viewBox="0 0 16 16">
+              <path d="M9 5a.5.5 0 0 0-1 0v3H6a.5.5 0 0 0 0 1h2.5a.5.5 0 0 0 .5-.5z" />
+              <path
+                d="M4 1.667v.383A2.5 2.5 0 0 0 2 4.5v7a2.5 2.5 0 0 0 2 2.45v.383C4 15.253 4.746 16 5.667 16h4.666c.92 0 1.667-.746 1.667-1.667v-.383a2.5 2.5 0 0 0 2-2.45V8h.5a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 0-.5-.5H14v-.5a2.5 2.5 0 0 0-2-2.45v-.383C12 .747 11.254 0 10.333 0H5.667C4.747 0 4 .746 4 1.667M4.5 3h7A1.5 1.5 0 0 1 13 4.5v7a1.5 1.5 0 0 1-1.5 1.5h-7A1.5 1.5 0 0 1 3 11.5v-7A1.5 1.5 0 0 1 4.5 3" />
+            </svg></span>سبک و شیشه‌ای</p>
+      </div>
+    </div>
+  </div>
+  
+              </div>    
+                    <!-- courses-content-holder -->
+                
+                </div>
+            </div>
+        </div>
+          <i class="fas fa-angle-right " id="nextslider" onclick="nextslider()"></i>
+
+      </div>
+</div>
+
+
+
+
+
+  <!-- slider ============================================================================= end slider -->
+  <!-- <div style="display: flex;justify-content: center; width: 100%; border-radius: 0.7rem !important;">
+    <img src="img/watch/mainnnnn.jpeg" class="screen__background__shape"
+      style="width: 95%; margin: auto; padding: 2rem 0; margin-bottom: 1rem;;" alt="">
+  </div> -->
+  <!-- fewjkl -->
+  <!--inventory Section-->
+
+  <section class=" inventory py-5" id="inventory">
+    <BR></BR>
+    <div class="container">
+      <!--Section Title-->
+      <div class="row mb-5" style="direction: rtl !important;">
+        <div class="col d-flex flex-wrap text-uppercase justify-content-center">
+          <h1 class="font-weight-bold align-self-center mx-1 wow animate__animated animate__bounceInRight ">محصولات</h1>
+          <h1 class="section-title-special mx-1 wow  animate__animated animate__bounceOutLeft">ساعت‌ها</h1>
+        </div>
+      </div>
+
+      <!-- End Section Title-->
+      <div class="row mb-5 wow animate__fadeOut animate__animated">
+        <div class="col-10 col-md-12 d-flex justify-content-end text-uppercase">
+          <button class="btn btn-outline-secondary text-uppercase mx-1">همه</button>
+          <button class="btn btn-outline-secondary text-uppercase mx-1">کلاسیک</button>
+          <button class="btn btn-outline-secondary text-uppercase mx-1">آلمانی</button>
+        </div>
+      </div>
+
+      <div class="row productcontainerall" id="tamas">
+
+        
+  </section>
+  <!-- start-question -->
+  <div class="section question py-5" id="question">
+    <div class="container" style="direction: rtl !important;">
+      <div class="row">
+        <div class="col-10 mx-auto p-4 col-md-6 my-2 d-flex justify-content-between question-gray">
+          <a href="#" class="question-icon mr-3">
+            <i class="fas fa-clock fa-fw"></i>
+          </a>
+          <div class="question-text w-75 animate__fadeInLeft wow animate__animated"
+            style="direction: rtl !important; text-align: right;">
+            <h4 class="question-title">آیا به دنبال یک ساعت هستید؟</h4>
+            <p class="question-info">آیا به دنبال یک ساعت خاص می‌گردید؟ ما تعداد بی‌پایانی از مدل‌های متنوع را برای شما
+              داریم.</p>
+          </div>
+        </div>
+        <div class="col-10 p-4 mx-auto col-md-6 my-2 d-flex justify-content-between question-yellow">
+          <a href="#" class="question-icon mr-3">
+            <i class="fas fa-money-bill fa-fw"></i>
+          </a>
+          <div class="question-text w-75 animate__fadeInBottomLeft wow animate__animated"
+            style="direction: rtl !important; text-align: right;">
+            <h4 class="question-title">آیا می‌خواهید یک ساعت را بفروشید؟</h4>
+            <p class="question-info">آیا یک ساعت ارزشمند دارید که می‌خواهید بفروشید؟ با ما تماس بگیرید و بهترین پیشنهاد
+              را دریافت کنید.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- end start-question -->
+  <section class="Featured py-2" id="Featured" style="direction: rtl !important;">
+    <div class="container" id="copani">
+      <div class="row mb-5 animate__rotateIn wow wow animate__animated">
+        <div class="col d-flex flex-wrap text-uppercase justify-content-center">
+          <h1 class="font-weight-bold align-self-center mx-1 wow animate__animated">تنوع</h1>
+          <h1 class="section-title-special mx-1 wow animate__animated">محصولات</h1>
+        </div>
+      </div>
+      <!-- end section -->
+
+      <div class="row">
+        <div class="Featured-info mx-auto col-10 col-lg-6 my-3 mt-5" style="margin: -0.5px;">
+          <!-- single item -->
+          <div class="Featured-item d-flex my-3 p-2 text-capitalize align-items-baseline flex-wrap">
+            <span class="Featured-icon mr-1"><i class="fas fa-clock"></i></span>
+            <h5 class="font-weight-bold mx-1">ساعت طلایی</h5>
+            <h5 class="mx-1">مدل جدید</h5>
+          </div>
+          <div class="Featured-item d-flex my-3 p-2 text-capitalize align-items-baseline flex-wrap">
+            <span class="Featured-icon mr-1"><i class="fas fa-gem"></i></span>
+            <h5 class="font-weight-bold mx-1">ساعت مچی لاکچری</h5>
+            <h5 class="mx-1">مدل جدید</h5>
+          </div>
+          <div
+            class="Featured-item d-flex my-3 p-2 text-capitalize align-items-baseline flex-wrap animate__rubberBand wow animate__animated">
+            <span class="Featured-icon mr-1"><i class="fas fa-brain"></i></span>
+            <h5 class="font-weight-bold mx-1">ساعت هوشمند</h5>
+            <h5 class="mx-1">مدل جدید</h5>
+          </div>
+          <div class="Featured-item d-flex my-3 p-2 text-capitalize align-items-baseline flex-wrap">
+            <span class="Featured-icon mr-1"><i class="fas fa-paint-brush"></i></span>
+            <h5 class="font-weight-bold mx-1">ساعت طرح دار</h5>
+            <h5 class="mx-1">مدل جدید</h5>
+          </div>
+          <div class="Featured-item d-flex my-3 p-2 text-capitalize align-items-baseline flex-wrap">
+            <span class="Featured-icon mr-1"><i class="fas fa-glasses"></i></span>
+            <h5 class="font-weight-bold mx-1">ساعت شیک</h5>
+            <h5 class="mx-1">مدل جدید</h5>
+          </div>
+          <!-- end single item -->
+        </div>
+
+        <!-- featured-img -->
+        <div class="col-10 mx-auto col-lg-6 featured-img my-3 align-self-center wow animate__animated"
+          style="margin-top: 15px !important;">
+          <div class="img-container">
+            <img src="img/watch/rolex-famous-brand-department-store-taipei_662214-259663.jpg"
+              class="img-fluid shadow featured-photo"
+              style="height: 27rem; width: 100%; background-size: cover; border-radius: 0.7rem; transition: all 0.5s ease-in-out !important;"
+              alt="">
+            <a href="#" class="Featured-link">
+              <i class="fas fa-search"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- End Of Featured
+    <!-- gallery -->
+  <section class="section py-5" id="section">
+    <div class="container ">
+      <div class="row mb-5 animate__tada wow animate__animated">
+        <div class="col d-flex flex-wrap text-uppercase justify-content-center">
+          <h1 class="font-weight-bold align-self-center mx-1">محصولات</h1>
+          <h1 class="section-title-special mx-1">پرفروش ترین</h1>
+        </div>
+      </div>
+
+      <!-- end section item -->
+      <div class="row animate__shakeY wow animate__animated">
+        <div class="col-sm-6">
+          <div class="gallery-item">
+            <img src="img/watch/watch-is-tree-with-tree-it_655090-51834.jpg" class="img-fluid gallery-img"
+              style="height: 32rem; width: 100%;" alt="car">
+          </div>
+        </div>
+        <div class="col-sm-6 d-flex flex-column justify-content-between">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="gallery-item">
+                <img src="img/watch/gold-silver-watch-with-word-time-face_662214-95392.jpg" class="img-fluid gallery-img "
+                  style="height: 16rem; width: 100%;" alt="">
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="gallery-item">
+                <img src="img/watch/concept-design-hand-watch_985323-11581.jpg" class="img-fluid gallery-img "
+                  style="height: 16rem; width: 100%;" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="row ">
+            <div class="col-sm-6">
+              <div class="gallery-item">
+                <img src="img/watch/rolex-famous-brand-department-store-taipei_662214-259663.jpg"
+                  class="img-fluid gallery-img " style="height: 16rem; width: 100%;" alt="">
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="gallery-item">
+                <img src="img/watch/rolex-watch-with-brand-name-brand-it_905510-6718.jpg" class="img-fluid gallery-img "
+                  style="height: 16rem; width: 100%;" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+  </section>
+
+  <!--Contact Section -->
+  <section class="contact py-5" id="contact  ">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 mx-auto">
+
+          <section class="contact-page-section"
+            style="padding-top: 0.5REM !important; padding-bottom: 0.5REM !important;">
+            <div class="container text-right">
+              <div class="sec-title" style="color: white !important;">
+                <div class="title" style="font-size: 22PX !important;">تماس با ما</div>
+                <h2 style="color: white !important;">با ما در تماس باشید</h2>
+              </div>
+              <div class="inner-container">
+                <div class="row clearfix">
+                  <!--Form Column-->
+                  <div class="form-column col-md-8 col-sm-12 col-xs-12" style="background-color: transparent !important;"
+                  >
+                    <div class="inner-column" style="background: #06142e !important;">
+                      <!--Contact Form-->
+                      <div class="contact-form">
+                        <form method="post" action="sendemail.php" id="contact-form">
+                          <div class="row clearfix">
+                            <div class="form-group col-md-6 col-sm-6 co-xs-12">
+                              <input type="text" name="name" value="" placeholder="نام" required>
+                            </div>
+                            <div class="form-group col-md-6 col-sm-6 co-xs-12">
+                              <input type="email" name="email" value="" placeholder="ایمیل" required>
+                            </div>
+                            <div class="form-group col-md-6 col-sm-6 co-xs-12">
+                              <input type="text" name="subject" value="" placeholder="موضوع" required>
+                            </div>
+                            <div class="form-group col-md-6 col-sm-6 co-xs-12">
+                              <input type="text" name="phone" value="" placeholder="تلفن" required>
+                            </div>
+                            <div class="form-group col-md-12 col-sm-12 co-xs-12">
+                              <textarea name="message" placeholder="پیام"
+                                style="background-color: rgb(224, 205, 205) !important;"></textarea>
+                            </div>
+                            <div class="form-group col-md-12 col-sm-12 co-xs-12">
+                              <button type="submit" class="theme-btn btn-style-one"
+                                style="border-radius: 0.5rem;">ارسال</button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <!--End Contact Form-->
+                    </div>
+                  </div>
+
+                  <!--Info Column-->
+                  <div class="info-column col-md-4 col-sm-12 col-xs-12" style="background-color: #06142e !important;">
+                    <div class="inner-column">
+                      <h2>اطلاعات تماس</h2>
+                      <ul class="list-info">
+                        <li>ادرس تهران خیابان مطهری نبش خیابان فدک1
+                          <i class="fas fa-globe"></i>
+                        </li>
+                        <li>example@test<i class="far fa-envelope"></i></li>
+                        <li>
+                          </i> 09167047790 <i class="fas fa-phone"></i><br> 09388449181
+                          <i class="fas fa-phone"></i>
+
+                        </li>
+                      </ul>
+                      <ul class="social-icon-four">
+                        <li class="follow">مارا دنبال کنید</li>
+
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-telegram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          </div>
+          </div>
+          <div id="map" style="height:  325px; width: 97%; margin-left: 1.5rem !important; margin: auto; padding: 0 20px;"></div>
+  </section>
+  <img src="" alt="">
+  <!--EndContact Section -->
+  <!-- end gallery -->
+
+  <!--Services Section-->
+  <div class="container" style="margin-top: 2rem;">
+    <!--Section Title-->
+    <section class="services py-5 d-flex align-items-center">
+      <!--Video Container-->
+      <div class="video-container">
+        <video class="video-item" autoplay loop muted>
+          <source src="video/videoBcg.mp4" type="video/mp4">
+          Your Browser does not support video tag
+        </video>
+        </video>
+      </div>
+      <!--End Video Container-->
+      <!--Video overlay-->
+      <div class="video-overlay"></div>
+      <!--End Video overlay-->
+      <!--Service Content-->
+      <div class="container py-5 wow animate__animated animate__slideInDown">
+        <div class="row my-3">
+          <!--Col-->
+          <div class="col-8 mx-auto col-lg-6 col-md-4 my-3">
+            <div class="service py-5 pl-4">
+              <span class="service-icon">
+                <i class="fas fa-clock"></i>
+              </span>
+              <h6 class="text-capitalize service-title">ساعت</h6>
+              <h5 class="text-uppercase font-weight-bold">استفاده از محصولات متنوع و شیک</h5>
+              <p class="text-muted">محصولات متنوع و شیک ساعت‌های ما به شما سبکی خاص می‌دهند.</p>
+            </div>
+          </div>
+          <!--End Col-->
+
+          <!--Col-->
+          <div class="col-8 mx-auto col-lg-6 col-md-4 my-3">
+            <div class="service py-5 pl-4">
+              <span class="service-icon">
+                <i class="far fa-clock"></i>
+              </span>
+              <h6 class="text-capitalize service-title">تعمیرات</h6>
+              <h5 class="text-uppercase font-weight-bold">تعمیر ساعت با دقت و حرفه‌ای</h5>
+              <p class="text-muted">تعمیرات حرفه‌ای و دقیق ساعت‌ها با افتخار به عهده ماست.</p>
+            </div>
+          </div>
+          <!--End Col-->
+
+          <!--Col-->
+          <div class="col-8 mx-auto col-lg-6 col-md-4 my-3" style="background-color: #441e14; border-radius: 0.5rem;">
+            <div class="service py-5 pl-4 " style="background-color: #cececece ; color: #000; border-radius: 0.5rem;">
+              <span class="service-icon">
+                <i class="fas fa-truck"></i>
+              </span>
+              <h6 class="text-capitalize service-title">ارسال رایگان</h6>
+              <h5 class="text-uppercase font-weight-bold">ارسال رایگان محصولات به سراسر کشور</h5>
+              <p class="text-muted">با اطمینان خرید کنید؛ ما محصولات را به سراسر کشور به شما ارسال می‌کنیم.</p>
+            </div>
+          </div>
+          <!--End Col-->
+        </div>
+      </div>
+
+    </section>
+    <!--End Services Section-->
+    <!-- مشتری ها -->
+    <div class="container" id="moshtari">
+      <div class="row mb-5">
+        <div class="col d-flex flex-wrap text-uppercase justify-content-center">
+          <h1 class="font-weight-bold align-self-center mx-1">مشتریان</h1>
+          <h1 class="section-title-special mx-1">نظرات</h1>
+        </div>
+      </div>
+      <div class="row">
+        <!-- کارت تک -->
+        <div class="col-10 col-md-6 mx-auto my-5 col-lg-4">
+          <div class="card">
+            <img src="img/watch/concept-design-hand-watch_985323-11581.jpg" class="card-img-top img-fluid " alt="عکس">
+            <div class="card-body text-center customer-card-card">
+              <img src="img/کاربران (3).jpg" alt="تصویر" class="rounded-circle customer-img"
+                style="width: 80px; border-radius: 60%; height: 80px;">
+              <div class="card-title">
+                <h5 class="customer-name text-capitalize">سعید</h5>
+              </div>
+              <h6 class="customer-jub text-capitalize"></h6>
+              <p class="customer-quote text-center">
+
+                سایت خیلی خوبیه ولی کاربر توش راحت نمیتونه جستجو کنه من قبلا در سایت شما همین ساعت رو سرچ کردم و نتونستم
+                پیداش کنم و لی از طریق گوگل تونستم پیداش کنم که دیدم گوگل سایت شما را داده و تعجب کردم چون قبلش سایت شما
+                را گشته بودم و مطمئن شده بودم که شما این ساعت را ندارید
+              </p>
+              <span class="customer-icon"><i class="fas fa-quote-left"></i></span>
+            </div>
+          </div>
+        </div>
+        <!-- پایان کارت تک -->
+        <!-- کارت تک -->
+        <div class="col-10 col-md-6 mx-auto my-5 col-lg-4">
+          <div class="card">
+            <img src="img/watch/rolex-watch-with-brand-name-brand-it_905510-6718.jpg" class="card-img-top img-fluid "
+              alt="عکس">
+            <div class="card-body text-center customer-card-card">
+              <img src="img/کاربران (2).jpg" alt="تصویر" class="rounded-circle customer-img"
+                style="width: 80px; border-radius: 60%; height: 80px;">
+              <div class="card-title">
+                <h5 class="customer-name text-capitalize">امیر</h5>
+              </div>
+              <h6 class="customer-jub text-capitalize"> </h6>
+              <p class="customer-quote text-center">
+                سایت خیلی خوبیه ولی کاربر توش راحت نمیتونه جستجو کنه من قبلا در سایت شما همین ساعت رو سرچ کردم و نتونستم
+                پیداش کنم
+                با عرض سلام و خسته نباشید ... خدمات ایران تایمر فوق العاده و بی نظیر هست ... به نظر من ایران تایمر حرفه
+                ای ترین و مطمئن ترین مرکز خرید ساعت در ایران هست ... باتشکر از خدمات تون .
+              </p>
+              <span class="customer-icon"><i class="fas fa-quote-left"></i></span>
+            </div>
+          </div>
+        </div>
+        <!-- پایان کارت تک -->
+        <!-- کارت تک -->
+        <div class="col-10 col-md-6 mx-auto my-5 col-lg-4">
+          <div class="card">
+            <img src="img/watch/rolex-famous-brand-department-store-taipei_662214-259663.jpg"
+              class="card-img-top img-fluid " alt="عکس">
+            <div class="card-body text-center customer-card-card">
+              <img src="img/کاربران (1).jpg" alt="تصویر" class=" customer-img"
+                style="width: 80px; border-radius: 60%; height: 80px;">
+              <div class="card-title">
+                <h5 class="customer-name text-capitalize">محمد رضا</h5>
+              </div>
+              <h6 class="customer-jub text-capitalize"></h6>
+              <p class="customer-quote text-center">
+
+                سایت خیلی خوبیه ولی کاربر توش راحت نمیتونه جستجو کنه من قبلا در سایت شما همین ساعت رو سرچ کردم و نتونستم
+                پیداش کنم و لی از طریق گوگل تونستم پیداش کنم که دیدم گوگل سایت شما را داده و تعجب کردم چون قبلش سایت شما
+                را گشته بودم و مطمئن شده بودم که شما این ساعت را ندارید
+
+
+              </p>
+              <span class="customer-icon"><i class="fas fa-quote-left"></i></span>
+            </div>
+          </div>
+        </div>
+        <!-- پایان کارت تک -->
+      </div>
+    </div>
+
+  </div>
+  <!-- مشتری ها end -->
+
+
+  <!-- End Footer-->
+  <!-- Site footer -->
+  <svg style="padding-top: 3rem !important;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path fill="#151414" fill-opacity="1"
+      d="M0,256L48,245.3C96,235,192,213,288,224C384,235,480,277,576,261.3C672,245,768,171,864,170.7C960,171,1056,245,1152,261.3C1248,277,1344,235,1392,213.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+    </path>
+  </svg>
+  <footer style="margin-top: -3rem;">
+    <footer class="footer-section">
+      <div class="container">
+        <div class="footer-cta pt-5 pb-5">
+          <div class="row">
+            <div class="col-xl-4 col-md-4 mb-30">
+              <div class="single-cta">
+                <i class="fas fa-map-marker-alt"></i>
+                <div class="cta-text">
+                  <h4>ما را پیدا کنید</h4>
+                  <span>خیابان 1010، جنوب غربی 54321، چندیگره</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-md-4 mb-30">
+              <div class="single-cta">
+                <i class="fas fa-phone"></i>
+                <div class="cta-text">
+                  <h4>تماس با ما</h4>
+                  <span>9876543210 0</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-md-4 mb-30">
+              <div class="single-cta">
+                <i class="far fa-envelope-open"></i>
+                <div class="cta-text">
+                  <h4>ایمیل بزنید</h4>
+                  <span>mail@info.com</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-content pt-5 pb-5">
+          <div class="row">
+            <div class="col-xl-4 col-lg-4 mb-50">
+              <div class="footer-widget">
+                <div class="footer-logo">
+                  <a href="index.html"><img src="https://i.ibb.co/QDy827D/ak-logo.png" class="img-fluid" alt="لوگو"></a>
+                </div>
+                <div class="footer-text">
+                  <p>لورم ایپسوم دلور سیت آمت، کنسکتتور آدیپیسایش ایلیت، سد دو eiusmod tempor incididuntut کنسکتتور
+                    آدیپیسایش
+                    ایلیت،لورم ایپسوم دلور سیت آمت.</p>
+                </div>
+                <div class="footer-social-icon" style="font-size: 55px;">
+                  <span>ما را دنبال کنید</span>
+                  <a href="#"><i class="fab fa-instagram instagram-bg" style="font-size: 2rem;"></i></a>
+                  <a href="#"><i class="fab fa-telegram-plane telegram-bg" style="font-size: 2rem;"></i></a>
+                  <a href="#"><i class="fab fa-whatsapp whatsapp-bg" style="font-size: 2rem;"></i></a>
+                  <!-- دیگر ایکن‌ها مانند ایکن واتساپ، تلگرام و ... -->
+                </div>
+
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+              <div class="footer-widget">
+                <div class="footer-widget-heading">
+                  <h3>محصولات</h3>
+                </div>
+                <ul>
+                  <li><a href="#">ساعت‌های مردانه</a></li>
+                  <li><a href="#">ساعت‌های زنانه</a></li>
+                  <li><a href="#">ساعت‌های بچگانه</a></li>
+                  <li><a href="#">ساعت‌های لوکس</a></li>
+                  <li><a href="#">ساعت‌های ورزشی</a></li>
+                  <li><a href="#">ساعت‌های هوشمند</a></li>
+                  <li><a href="#">تخفیفات و پیشنهادات</a></li>
+                  <li><a href="#">تعمیر و خدمات پس از فروش</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+              <div class="footer-widget">
+                <div class="footer-widget-heading">
+                  <h3>اشتراک</h3>
+                </div>
+                <div class="footer-text mb-25">
+                  <p>از اشتراک خبرنامه‌مان به‌منظور دریافت آخرین اخبار و تخفیفات استفاده کنید، لطفاً آدرس ایمیل خود را
+                    وارد کنید.</p>
+                </div>
+                <div class="subscribe-form">
+                  <form action="#">
+                    <input type="text" placeholder="آدرس ایمیل">
+                    <button><i class="fab fa-telegram-plane"></i></button>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="copyright-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+              <div class="copyright-text">
+                <p>حق کپی‌رایت &copy; 2023، همه حقوق محفوظ است <a href="https://codepen.io/anupkumar92/">سعید رضایی</a>
+                </p>
+              </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+              <div class="footer-menu">
+                <ul>
+                  <li><a href="#">صفحه اصلی</a></li>
+                  <li><a href="#">شرایط و قوانین</a></li>
+                  <li><a href="#">حریم خصوصی</a></li>
+                  <li><a href="#">سیاست‌ها</a></li>
+                  <li><a href="#">مدل‌های ساعت</a></li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </footer>
+
+</body>
+<!-- <h6 class="text-sm  d-flex justify-content-center align-items-center" style="position: absolute;"></h6> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="sliderrrrrrrrr/app.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.min.js"></script>
+<script src="slider/js/slick.min.js"></script>
+<script src="slider/js/app.js"></script>
+<script src="./js/all.js"></script>
+
+<link rel="stylesheet" href="js/slick.min.js">
+<!-- end skil -->
+<script src="js/script.js"></script>
+<!-- jquery -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<!-- bootstrap js -->
+<script src="js/bootstrap.bundle.min.js"></script>
+<!-- script js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="jquery-3.7.1.min.js"></script>
+<script src="slider/js/owl.carousel.min.js"></script>
+<!-- اضافه کردن jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<script src="js/wow.js"></script>
+<script>
+  new WOW().init();
+</script>
+
+<script>
+  var map = L.map('map').setView([35.6895, 51.3890], 12); // Coordinates for Tehran
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+  }).addTo(map);
+
+  // Marker for Tehran
+  var tehranMarker = L.marker([35.6895, 51.3890]).addTo(map);
+  tehranMarker.bindPopup("<b>تهران</b>").openPopup();
+</script>
+
+
+</html>
